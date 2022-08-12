@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+
+</head>
+<body>
+  <div class="left">
+    <div class="card-front">
+      <img src="./images/bg-card-front.png" alt="" class="front">
+      <img class="logo" src="./images/card-logo.svg" alt="">
+      <input class="front-input1" type="text" readonly>
+      <input class="front-input2" type="text" readonly>
+      <input class="front-input3" type="text" readonly>
+    </div>
+
+    <div class='card-back'>
+      <img src="./images/bg-card-back.png" alt="" class="back">
+      <input class="back-input" type="text" readonly>
+    </div>
+  </div>
+
+  <div class="right">
+    <form id="form-1">
+      <div class="name">
+        <label for="name"><b>Cardholder Name</b></label>
+        <input type="text" id="name" placeholder="e.g. Jane Appleseed" onkeyup="autofill()">
+        <p></p>
+      </div>
+
+      <div class="number">
+        <label for="number"><b>Card Number</b></label>
+        <input type="tel" id="number" placeholder="e.g. 1234 5678 9123 0000" onkeyup="autofill()" onkeypress="autofill()" maxlength="19">
+        <p></p>
+      </div>
+
+      <div class="date-cvc">
+        <div>
+          <label for="date"><b>Exp. Date (MM/YY)</b></label>
+          <div class="date">
+            <input type="tel" id="month" placeholder="MM" maxlength="2" onkeyup="autofill()">
+            <input type="tel" id="year" placeholder="YY" maxlength="2">
+          </div>
+          <p></p>
+        </div>
+  
+        <div class="cvc">
+          <label><b>CVC</b></label>
+          <input type="tel" id="cvc" placeholder="e.g. 123" onkeyup="autofill()" maxlength="3">
+          <p></p>
+        </div>
+      </div>
+
+      <div class="button">
+        <button type="submit">Confirm</button>
+      </div>
+
+    </form>
+
+    <form id="form-2">
+      <img src="./images/icon-complete.svg" alt="">
+      <h1>THANK YOU!</h1>
+      <p>We've added your card details</p>
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+  
+  <script src="./main.js"></script>
+</body>
+</html>
